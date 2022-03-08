@@ -1,0 +1,33 @@
+<div class="BD">
+    <form [formGroup]="formValue">
+        <div class="body">
+
+            <div class="leftbody" align=right>
+                <div> 
+                    <label for="brdcod">Brand Id:</label>          
+                    <input type="text" class="form-control" formControlName="brdcod" id="brdcod" placeholder="">
+                </div>
+                <div>
+                    <label for="brdtit" >Brand Name:</label>
+                    <input type="text" class="form-control" formControlName="brdtit" id="brdtit" placeholder="">
+                </div>
+                <div> 
+                    <label for="brdcountry">Country:</label>          
+                    <input type="text" class="form-control" formControlName="brdcountry" id="brdcountry" placeholder="">
+                </div>
+                <div style="padding-top: 120px;"> 
+                    <label for="remarks">Remarks:</label>          
+                    <input type="text" class="form-control" formControlName="remarks" id="remarks" placeholder="">
+                </div>
+            </div>
+            <div class="buttonbody">
+                <div>
+                    <button type="button" (click)=" CreateBrand()" style="margin-left: 30px;">Execute</button>  
+                    <button type="button" style="margin-left: 5px;">Update</button>
+                    <button type="button" (click)="ClearPage()" style="margin-left: 5px;">Clear</button>     
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+

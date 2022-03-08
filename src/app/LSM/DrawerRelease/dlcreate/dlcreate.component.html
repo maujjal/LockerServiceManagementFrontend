@@ -1,0 +1,145 @@
+<div class="BD">
+    <form [formGroup]="formValue">
+        <div class="body">
+
+            <div class="leftbody" align=right>
+                <div> 
+                    <label for="lid">Locker Id:</label>          
+                    <input type="text" class="form-control" id="lid" placeholder="">
+                </div>
+                <div>
+                    <label for="did" >Drawer Id:</label>
+                    <input type="text" class="form-control" id="did" placeholder="">
+                </div>
+                <div> 
+                    <label for="anum">Account Number:</label>          
+                    <input (keydown.enter)="onKeyPress($event)" type="text" class="form-control" id="anum" placeholder="">
+                </div>
+                <div>
+                    <label for="atitle" >Account Title:</label>
+                    <input type="text" class="form-control" id="atitle" placeholder="">
+                </div>
+                <div> 
+                    <label for="dpro">Deposit Product:</label>          
+                    <input type="text" class="form-control" id="dpro" placeholder="">
+                </div>
+                <div>
+                    <label for="fcval" >For Sale Value:</label>
+                    <input type="text" class="form-control" id="fcval" placeholder="">
+                </div>
+                <div> 
+                    <label for="mval">Market Value:</label>          
+                    <input type="text" class="form-control" id="mval" placeholder="">
+                </div>
+                <div>
+                    <label for="cmny" >Caution Money:</label>
+                    <input type="text" class="form-control" id="cmny" placeholder="">
+                </div> 
+                <div> 
+                    <label for="remarks">Remarks:</label>          
+                    <input type="text" class="form-control" id="remarks" placeholder="">
+                </div>
+            </div>
+            <div class="rightbody" align=right>
+                <div> 
+                    <label for="ctyp">Customer Type:</label>          
+                    <input type="text" class="form-control" id="ctyp1" placeholder="" style="width: 50px;">
+                    <input type="text" class="form-control" id="ctyp2" placeholder="" style="width: 182px;">
+                </div>
+                <div>
+                    <label for="cnum" >Customer Name:</label>
+                    <input type="text" class="form-control " id="cnum" placeholder="">
+                </div>
+                <div>
+                    <label for="add1" >Address1:</label>
+                    <input type="text" class="form-control " id="add1" placeholder="">
+                </div>
+                <div>
+                    <label for="add2" >Address2:</label>
+                    <input type="text" class="form-control " id="add2" placeholder="">
+                </div>
+                <div>
+                    <label for="hus" >House:</label>
+                    <input type="text" class="form-control" id="hus" placeholder="">
+                </div>
+
+                <div> 
+                    <label for="ctnum">City Name:</label>          
+                    <input type="text" class="form-control" id="ctnum" placeholder="">
+                </div>
+                <div>
+                    <label for="pnum" >Phone No:</label>
+                    <input type="text" class="form-control " id="pnum" placeholder="">
+                </div>
+                <div> 
+                    <label for="alodt">Allocation Date:</label>          
+                    <input type="date" class="form-control" id="alodt" placeholder="" style="width: 254px; height: 22px;">
+                </div>
+                <div> 
+                    <label for="exdt">Expire Date:</label>          
+                    <input type="date" class="form-control" id="exdt" placeholder="" style="width: 254px; height: 22px;">
+                </div>
+                <div>
+                    <label for="pstus" >Payment Status:</label>
+                    <input type="text" class="form-control " id="pstus" placeholder="">
+                </div>
+            </div>
+
+            <div class="buttonbody">
+                <div>
+                    <button type="button" style="margin-left: 30px;">Execute</button>  
+                    <button type="button" style="margin-left: 5px;">Update</button>
+                    <button type="button" (click)="ClearPage()" style="margin-left: 5px;">Clear</button>     
+                </div>
+            </div>
+        </div>
+    </form>
+    <div *ngIf="showMe" class="box">
+        <div class="tablebody">
+            <p style="float: left;margin-block-start: 0em; margin-block-end: 0em;">Security List</p>
+            <button (click)="close()" type="button" aria-label="Close" style="float: right; margin-top: 10px;">X
+            </button>
+            <table>
+                <tr>
+                    <th>FDR Lien</th>
+                    <th>Security No</th>
+                    <th>Title</th>
+                    <th>SerNum</th>
+                    <th>Sectyp</th>
+                    <th>Margin</th>
+                    <th>Reamin FDR AMT</th>
+                    <th>FDR Balance</th>
+                    <th>A/I</th>
+                    <th>X</th>
+                </tr>
+                <tr>
+                    <td><input type="text" class="form-control " id="pstus" placeholder="" style="width: 45px;"></td>
+                    <td><input type="text" class="form-control " id="pstus" placeholder="" style="width: 60px;"></td>
+                    <td><input type="text" class="form-control " id="pstus" placeholder="" style="width: 60px;"></td>
+                    <td><input type="text" class="form-control " id="pstus" placeholder="" style="width: 45px;"></td>
+                    <td><input type="text" class="form-control " id="pstus" placeholder="" style="width: 45px;"></td>
+                    <td><input type="text" class="form-control " id="pstus" placeholder="" style="width: 45px;"></td>
+                    <td><input type="text" class="form-control " id="pstus" placeholder="" style="width: 45px;"></td>
+                    <td><input type="text" class="form-control " id="pstus" placeholder="" style="width: 45px;"></td>
+                    <td><input type="text" class="form-control " id="pstus" placeholder="" style="width: 45px;"></td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>X</td>
+                </tr>
+            </table>
+            <div >
+                <button type="button" style="margin-top: 10px; margin-bottom: 10px; margin-left: 700px;">Submit</button>     
+            </div>
+        </div>
+    </div>
+</div>

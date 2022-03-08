@@ -1,0 +1,46 @@
+<div class="BD">
+    <form [formGroup]="formValue">
+        <div class="body">
+
+            <div class="leftbody" align=right>
+                <div> 
+                    <label for="lid">Locker Id:</label>          
+                    <input type="text" class="form-control" id="lid" placeholder="">
+                </div>
+                <div>
+                    <label for="lcn" >Locker Name:</label>
+                    <input type="text" class="form-control" id="lcn" placeholder="">
+                </div>
+                <div> 
+                    <label for="numd">Number Of Drawer:</label>          
+                    <input type="number" class="form-control" id="numd" placeholder="">
+                </div>
+                <div>
+                    <label for="des" >Description:</label>
+                    <input type="text" class="form-control" id="des" placeholder="">
+                </div>
+            </div>
+            <div class="rightbody" align=right>
+                <div>
+                    <label for="brnd" >Brand:</label>
+                    <input type="text" class="form-control " id="brnd" placeholder="">
+                </div>
+                <div>
+                    <label for="vend" >Vendor:</label>
+                    <input type="text" class="form-control " id="vend" placeholder="">
+                </div>
+                <div>
+                    <label for="remarks" >Remarks:</label>
+                    <input type="text" class="form-control " id="remarks" placeholder="">
+                </div>
+            </div>
+
+            <div class="buttonbody">
+                <div>
+                    <button type="button" style="margin-left: 30px;">Execute</button>  
+                    <button type="button" style="margin-left: 5px;">Update</button>
+                    <button type="button" (click)="ClearPage()" style="margin-left: 5px;">Clear</button>     
+                </div>
+            </div>
+        </div>
+    </form>

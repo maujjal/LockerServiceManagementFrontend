@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* You can add global styles to this file, and also import other style files */
+
+
+.fixed-header, .fixed-footer{
+    position: fixed; 
+    width: 100%;   
+   
+  }
+  .fixed-header{
+    top: 0;
+    position: fixed; 
+    background-color:rgb(153, 182, 199);
+    height: 113px;
+  }
+  .fixed-Menu{
+    position: fixed; 
+    background-color:rgb(199, 153, 153);
+    height: 20px;
+    width: 100%;   
+  }
+  .fixed-footer{
+     height: 40px; 
+    bottom: 0;
+     background-color:rgba(153, 182, 199, 0.994);
+    padding-bottom: 5px;
+  }

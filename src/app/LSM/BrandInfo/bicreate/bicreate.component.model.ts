@@ -8,4 +8,5 @@ export class  BrandModel{
     status:string = '';
     oprtimstamp:any = '';
     remarks:string='';
+    responseMessage:string='';
   }

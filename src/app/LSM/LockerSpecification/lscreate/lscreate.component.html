@@ -4,40 +4,50 @@
 
             <div class="leftbody" align=right>
                 <div> 
-                    <label for="lid">Locker Id:</label>          
-                    <input type="text" class="form-control" id="lid" placeholder="">
+                    <label for="lckrid">Locker Id:</label>          
+                    <input type="text" class="form-control"  formControlName="lckrid" id="lckrid" placeholder="" autocomplete="off">
                 </div>
                 <div>
-                    <label for="lcn" >Locker Name:</label>
-                    <input type="text" class="form-control" id="lcn" placeholder="">
+                    <label for="lckrnam" >Locker Name:</label>
+                    <input type="text" class="form-control" formControlName="lckrnam" id="lckrnam" placeholder="" autocomplete="off">
                 </div>
                 <div> 
-                    <label for="numd">Number Of Drawer:</label>          
-                    <input type="number" class="form-control" id="numd" placeholder="">
+                    <label for="numofdrwr">Number Of Drawer:</label>          
+                    <input type="number" class="form-control" formControlName="numofdrwr" id="numofdrwr" placeholder="" autocomplete="off">
                 </div>
                 <div>
-                    <label for="des" >Description:</label>
-                    <input type="text" class="form-control" id="des" placeholder="">
+                    <label for="lckrdes" >Description:</label>
+                    <input type="text" class="form-control" formControlName="lckrdes" id="lckrdes" placeholder="" autocomplete="off">
                 </div>
             </div>
             <div class="rightbody" align=right>
                 <div>
-                    <label for="brnd" >Brand:</label>
-                    <input type="text" class="form-control " id="brnd" placeholder="">
+                    <label for="brandcod" >Brand:</label>
+                    <!-- <input type="text" class="form-control " formControlName="brandcod" id="brandcod" placeholder=""> -->
+                    <select name="brandcod" class="form-control" formControlName="brandcod" >
+                        <option *ngFor="let data of AllBrand" value="{{data.brdcod}}">
+                            {{data.brdtit}}
+                        </option>
+                    </select>
                 </div>
                 <div>
-                    <label for="vend" >Vendor:</label>
-                    <input type="text" class="form-control " id="vend" placeholder="">
+                    <label for="vencod" >Vendor:</label>
+                    <!-- <input type="text" class="form-control " id="vencod" placeholder=""> -->
+                    <select name="vencod" class="form-control" formControlName="vencod" >
+                        <option *ngFor="let data of AllVendor" value="{{data.vencod}}">
+                            {{data.ventit}}
+                        </option>
+                    </select>
                 </div>
                 <div>
                     <label for="remarks" >Remarks:</label>
-                    <input type="text" class="form-control " id="remarks" placeholder="">
+                    <input type="text" class="form-control" formControlName="remarks" id="remarks" placeholder="" autocomplete="off">
                 </div>
             </div>
 
             <div class="buttonbody">
                 <div>
-                    <button type="button" style="margin-left: 30px;">Execute</button>  
+                    <button type="button" (click)="CreateLockerSpecification()" style="margin-left: 30px;">Execute</button>  
                     <button type="button" style="margin-left: 5px;">Update</button>
                     <button type="button" (click)="ClearPage()" style="margin-left: 5px;">Clear</button>     
                 </div>

@@ -28,6 +28,7 @@ export class BICreateComponent implements OnInit {
       oprtimstamp:[''],
       updstamp:[''],
       updtimstamp:[''],
+      responseMessage:[''],
     });
   }
 
@@ -42,7 +43,7 @@ export class BICreateComponent implements OnInit {
     this.Api.CreateBrandInfo(this.BrandModeloObj)
     .subscribe(res =>{
       console.log(res)
-      alert("Add Successfully");
+      alert(res.responseMessage);
       this.formValue.reset();
     },
     err=>{

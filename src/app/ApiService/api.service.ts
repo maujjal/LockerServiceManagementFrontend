@@ -33,6 +33,54 @@ export class ApiService {
     }))
   }
 
+  GetBrandInfos(){
+    return this.http.get(this.API_URL+'/GetBrandInfos');   
+  }
+
+  //  Vendor Info API
+
+  CreateVendorInfo(data:any){
+    return this.http.post<any>(this.API_URL+'/AddVendor', data)
+      .pipe(map((res:any)=> {
+        return res;
+      }))
+  }
+
+  GetByVendorInfoId(id : any){
+    return this.http.get(this.API_URL+'/Vendor/id'+id);   
+  }
+
+  UpdateVendorInfo(id : any, data : any){
+    return this.http.put<any>(this.API_URL+'/Vendor/id',data)
+    .pipe(map((res:any)=> {
+      return res;
+    }))
+  }
+
+  GetVendorInfos(){
+    return this.http.get(this.API_URL+'/GetVendors');   
+  }
+
+  //  Locker Specification Info API
+
+  CreateLockerSpecification(data:any){
+    return this.http.post<any>(this.API_URL+'/AddLockerSpecification', data)
+      .pipe(map((res:any)=> {
+        return res;
+      }))
+  }
+
+  GetByLockerSpecificationId(id : any){
+    return this.http.get(this.API_URL+'/LockerSpecification/id'+id);   
+  }
+
+  UpdateLockerSpecification(id : any, data : any){
+    return this.http.put<any>(this.API_URL+'/LockerSpecification/id',data)
+    .pipe(map((res:any)=> {
+      return res;
+    }))
+  }
+
 //  Drawer Allocate API
 
     CreateDrawerAllocate(data:any){

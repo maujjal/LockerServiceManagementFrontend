@@ -35,7 +35,7 @@ button{
 }
 
 .leftbody{
-    width: 400px;
+    width: 500px;
     margin-top: 20px;
     float : left;
     padding-left: 100px;
@@ -43,7 +43,7 @@ button{
 }
 
 .rightbody{
-    width: 400px;
+    width: 500px;
     margin-top: 20px;
     float : left;
     padding-left: 100px;
@@ -65,6 +65,13 @@ label{
 input{
     width: 250px;
     height: 20px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+select{
+    width: 259px;
+    height: 25px;
     margin-top: 5px;
     margin-left: 10px;
 }

@@ -1,1 +1,51 @@
-<p>vicreate works!</p>
+<div class="BD">
+    <form [formGroup]="formValue">
+        <div class="body">
+
+            <div class="leftbody" align=right>
+                <div> 
+                    <label for="vencod">Vendor Id:</label>          
+                    <input type="text" class="form-control" formControlName="vencod" id="vencod" placeholder="" autocomplete="off">
+                </div>
+                <div>
+                    <label for="ventit" >Vendor Name:</label>
+                    <input type="text" class="form-control" formControlName="ventit" id="ventit" placeholder="" autocomplete="off">
+                </div>
+                <div> 
+                    <label for="vencountry">Country:</label>          
+                    <input type="text" class="form-control" formControlName="vencountry" id="vencountry" placeholder="" autocomplete="off"> 
+                </div>
+                <div> 
+                    <label for="phone">Phone:</label>          
+                    <input type="text" class="form-control" formControlName="phone" id="phone" placeholder="" autocomplete="off">
+                </div>
+                <div style="padding-top: 120px;"> 
+                    <label for="remarks">Remarks:</label>          
+                    <input type="text" class="form-control" formControlName="remarks" id="remarks" placeholder="" autocomplete="off"> 
+                </div>
+            </div>
+            <div class="rightbody" align=right>
+                <div>
+                    <label for="address1" >Address1:</label>
+                    <input type="text" class="form-control" formControlName="address1" id="address1" placeholder="" autocomplete="off">
+                </div>
+                <div>
+                    <label for="address2" >Address2:</label>
+                    <input type="text" class="form-control" formControlName="address2" id="address2" placeholder="" autocomplete="off">
+                </div>
+                <div>
+                    <label for="address3" >Address3:</label>
+                    <input type="text" class="form-control" formControlName="address3" id="address3" placeholder="" autocomplete="off">
+                </div>
+            </div>
+            <div class="buttonbody">
+                <div>
+                    <button type="button" (click)=" CreateVendor()" style="margin-left: 30px;">Execute</button>  
+                    <button type="button" style="margin-left: 5px;">Update</button>
+                    <button type="button" (click)="ClearPage()" style="margin-left: 5px;">Clear</button>     
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
